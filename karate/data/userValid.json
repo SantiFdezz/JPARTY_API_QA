@@ -1,0 +1,11 @@
+[{
+    "username": "Gaelito12",
+    "email": "gael2@gmail.com",
+    "province": "A Coruña",
+    "password": "password",
+    "birthdate": "2001-03-24"
+},
+{
+    "email": "prueba@gmail.com",
+    "password":"pruebaprueba"
+}]
