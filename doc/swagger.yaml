@@ -125,7 +125,7 @@ paths:
           $ref: '#/components/responses/ServerError'
     put:
       tags:
-       - User
+      - User
       summary: Update user's data
       security:
       - bearerAuth: []
@@ -207,7 +207,7 @@ paths:
         500:
           $ref: '#/components/responses/ServerError'
   
-  /user/assistevents/{id}:
+  /user/assistevent/{id}:
     post:
       tags:
         - User
@@ -297,7 +297,7 @@ paths:
         500:
           $ref: '#/components/responses/ServerError'
 
-  /user/likedevents/{id}:
+  /user/likedevent/{id}:
     post:
       tags:
         - User
@@ -442,7 +442,7 @@ paths:
         500:
           $ref: '#/components/responses/ServerError'
     
-  /events/{id}:
+  /event/{id}:
     get:
       tags:
         - Events
@@ -661,7 +661,8 @@ components:
         application/json:
           schema:
             example:
-              response: ok - SessionToken="token"
+              response: ok 
+              SessionToken: token
   schemas:
   # Respuestas y body de las peticiones
     LoginBody:
