@@ -4,6 +4,10 @@
         "order_by": "date"
     },
     {
+        "province": "A Coruña",
+        "order_by": "price"
+    },
+    {
         "mine": true
     }
 ]

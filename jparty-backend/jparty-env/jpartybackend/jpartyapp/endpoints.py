@@ -278,6 +278,7 @@ def events(request):
         for event in events:
             #if  (sort_by is not None and'secretkey' in sort_by and event.secretkey is not None) or (sort_by is not None 'secretkey' not in sort_by):
             assistants = UserAssist.objects.filter(event=event).count()
+            manager = User.objects.get(id=event.manager.id)
             try:
                 userLiked = UserLikes.objects.get(user=user_session.user, event=event)
                 userLiked = True
@@ -290,6 +291,7 @@ def events(request):
                 userAssist = False            
             music_genre = MusicGenre.objects.get(id=event.music_genre.id)
             json_response.append({
+                "manager": manager.email,
                 "id": event.id,
                 "title": event.title,
                 "province": event.province,
@@ -341,7 +343,7 @@ def events(request):
             return JsonResponse({"response": "not_ok"}, status=400)
         event = Events(manager=user_session.user, title=title,street=street, province=province, music_genre=music_genre, price=price,secretkey=secretkey, link=link, date=date.isoformat(),image=image, description=description, )
         event.save()
-        return JsonResponse({'message': 'Event created'}, status=201)
+        return JsonResponse({'message': 'Event created', 'manager': event.manager}, status=201)
     else:
         return JsonResponse({'message': 'Method not allowed'}, status=405)
 #TESTEADO

@@ -1,10 +1,10 @@
-# Wikipedia 'Automatizacion" search TESTING README #
+# JustParty Karate API TESTING #
 
 ## Index
  - [Repository Description](#Repository_Description)
  - [Pre-Requisites](#Pre-Requisites)
  - [PyEnv-Configuration](#PyEnv-Configuration)
- - [Exercise_1](#Exercise_1)
+ - [Karate_API_Testing](#Karate_API_Testing)
 
 
 
@@ -14,7 +14,7 @@ This repository contains automated tests for the most important petitions on Jus
 The tests are deployed to the wikipedia_page.js file, which can be run through the Cypress launcher.
 ## Pre-Requisites
 
- - https://nodejs.org/en - Version 10.5.0
+ - https://nodejs.org/en - Version 10.7.0
  - https://www.python.org/downloads/ - Version 3.12.3
 
 ## PyEnv-Configuration
@@ -30,7 +30,7 @@ After doing this, we are gonna open the python enviroment and the server.
     - cd jpartybackend
     - python manage.py runserver
 ```
-# Karate API Testing: JParty APP Swagger
+# Karate_API_Testing: JParty APP Swagger
 Testing Execution:
 
 After opening the server, the next step is to run the tests, first you'll have to be positioned on the root folder.
