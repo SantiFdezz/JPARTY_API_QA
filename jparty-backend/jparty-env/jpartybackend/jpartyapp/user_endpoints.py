@@ -1,7 +1,6 @@
 from django.http import JsonResponse
 import secrets
 import bcrypt
-from django.utils import timezone
 from django.core.exceptions import PermissionDenied
 from django.views.decorators.csrf import csrf_exempt
 from .models import User,UserSession, MusicGenre, UserPreferences

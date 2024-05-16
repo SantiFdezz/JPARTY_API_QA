@@ -7,5 +7,6 @@
 },
 {
     "email": "prueba@gmail.com",
-    "password":"pruebaprueba"
+    "password":"pruebaprueba",
+    "SessionToken": "9238b3ca43bfd2bc20c1"
 }]

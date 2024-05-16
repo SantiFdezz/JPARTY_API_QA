@@ -1,18 +1,13 @@
 Feature: Session and Events Test
 
 Background:
-    * url baseUrl+"/user/session"
-    * def data = read('data/userValid.json')[1]
-    * def sorted = read('utils/isSorted.js')
-    And request data 
-    When method post
-    Then status 201
-    * def SessionToken = response.SessionToken
+    Given url baseUrl+"/user/session"
+    Given def data = read('data/userValid.json')[1]
+    Given def sorted = read('utils/isSorted.js')
 
 Scenario Outline: Get SessionToken and test events endpoint with different examples
-    
-    * url baseUrl+"/events"
-    And header SessionToken = SessionToken
+    Given url baseUrl+"/events"
+    And header SessionToken = data.SessionToken
     And params <searchParams>
     And method get
     When status 200
